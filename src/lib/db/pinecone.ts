@@ -40,19 +40,23 @@ export async function loadSupabaseIntoPinecode(fileKey: string) {
   if (!file_name) {
     throw new Error("File not found");
   }
+  console.log("In 1");
   const loader = new PDFLoader(file_name);
   const pages = (await loader.load()) as PDFPage[];
   console.log("1--");
   //2. split and segment the pdf into smaller documents
+  console.log("In 2");
   const documents = await Promise.all(
     pages.map((page) => prepareDocument(page))
   );
   console.log("2--");
   //3. vectorise and embed in the individual documents
+  console.log("In 3");
   const vectors = await Promise.all(documents.flat().map(embedDocument));
   console.log("vectors", vectors);
   console.log("3--");
   //4. Upload to pinecode
+  console.log("In 4");
   const client = await getPincone();
   const pineconeIndex = await client.index("paper-converse");
   console.log("inserting vectors into pinecode");
