@@ -44,7 +44,7 @@ export default async function Home() {
             Join million of users and professionals to instantly answer
             questions and understand reserach with AI
           </p>
-          <div className="w-full sm:3/4 mt-4">
+          <div className="w-full sm:w-full md:w-3/4 lg:w-3/4 mt-4">
             {isAuth ? (
               <FileUpload></FileUpload>
             ) : (
@@ -55,7 +55,7 @@ export default async function Home() {
               </Link>
             )}
           </div>
-          <div className="mt-2 w-full sm:3/4 relative overflow-hidden rounded-xl border-dashbed border-2">
+          <div className="mt-2 w-full sm:w-full md:w-3/4 lg:w-3/4 relative overflow-hidden rounded-xl border-dashbed border-2">
             <img src="/screenshot.jpg" alt="Your Name" />
           </div>
         </div>
