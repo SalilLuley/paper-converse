@@ -42,7 +42,7 @@ export default async function Home() {
           </div>
           <p className="max-w-xl mt-2 text-l text-slate-600">
             Join million of users and professionals to instantly answer
-            questions and understand reserach with AI
+            questions and understand research with AI
           </p>
           <div className="w-full sm:w-full md:w-3/4 lg:w-3/4 mt-4">
             {isAuth ? (
